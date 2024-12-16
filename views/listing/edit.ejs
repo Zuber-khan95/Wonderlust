@@ -1,0 +1,17 @@
+<% layout("/layout/boilerplate")%>
+<body>
+  <h3>Edit the listing here</h3>
+  <div class="row mt-3">
+    <div class="col-6 offset-3">
+  <form method="POST" action="/listings/<%=listing._id%>?_method=PATCH" enctype="multipart/form-data">
+    <input type="text"   class="form-control" value="<%=listing.title%>" name="title" placeholder="Enter the title"><br><br>
+    <textarea   class="form-control" name="description" id="" cols="30" rows="5" placeholder="Enter the description"><%=listing.description%></textarea><br><br>
+    <input   class="form-control" type="file"  value="<%=listing.image%>" placeholder="upload New image" name="image"><br><br>
+     <input   class="form-control" type="text"  value="<%=listing.price%>" placeholder="Enter the price" name="price"><br><br>
+      <input   class="form-control" type="text"  value="<%=listing.location%>" placeholder="Enter the location" name="location"><br><br>
+      <input   class="form-control" type="text" value="<%=listing.country%>" placeholder="Enter the country" name="country"><br><br>
+<button class="btn btn-info">click for Update</button>
+  </form>
+</div>
+</div>
+</body>

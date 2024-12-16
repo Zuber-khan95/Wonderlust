@@ -1,0 +1,38 @@
+<% layout("/layout/boilerplate")%>
+<body>
+  <h3>Create a new listing here..</h3>
+  <form  method="post" action="/listings" enctype="multipart/form-data"  >
+    <div>
+      <label for="validationCustom01" class="form-label"></label>
+      <input type="text" 
+      class="form-control"
+       id="validationCustom01" 
+       placeholder="Enter the title"
+       name="title"
+        required>
+    </div>
+    <div>
+      <label for="validationCustom02" class="form-label"></label>
+     <textarea name="description" class="form-control" id="validationCustom02" cols="30" rows="5" placeholder="Enter descriptrion here"></textarea>
+     
+    </div>
+    <div>
+      <label for="validationCustom03" class="form-label"></label>
+      <input type="file"  class="form-control" id="validationCustom03" name="image" >
+    </div>
+    <div>
+      <label for="validationCustom04" class="form-label"></label>
+      <input type="text" placeholder="Enter the price per night" name="price" class="form-control" required>
+    </div>
+    <div>
+      <label for="validationCustom05" class="form-label"></label>
+      <input type="text" placeholder="Enter the location" name="location" class="form-control" required>
+    </div>
+    <div>
+      <label for="validationCustom06" class="form-label"></label>
+      <input type="text" placeholder="Enter the country" name="country" class="form-control" >
+    </div>
+    <br>
+      <button class="btn btn-info">Add Listing</button>
+  </form>
+</body>

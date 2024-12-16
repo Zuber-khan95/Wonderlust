@@ -1,0 +1,27 @@
+<% layout("/layout/boilerplate")%>
+<body>
+  <%=errorMsg%>
+  <h3>SignUp on Wonderlust</h3>
+  <form  method="post" action="/signup"  >
+    <div>
+      <label for="validationCustom01" class="form-label">username:</label>
+      <input type="text" 
+      class="form-control"
+       id="validationCustom01" 
+       placeholder="Enter the username"
+       name="username"
+        required>
+    </div>
+    <div>
+      <label for="validationCustom04" class="form-label">email:</label>
+      <input type="text" placeholder="Enter the email" name="email" class="form-control" required>
+    </div>
+    <div>
+      <label for="validationCustom05" class="form-label">password:</label>
+      <input type="password" placeholder="Enter the password" name="password" class="form-control" required>
+    </div>
+    <br>
+      <button class="btn btn-info">register</button>
+  </form>
+  <br><br><br><br><br>
+</body>

@@ -1,0 +1,67 @@
+<% layout("/layout/boilerplate")%>
+<body>
+  <%=successMsg%>
+    <%=errorMsg%>
+  <h3><%=listing.title%></h3><br>
+  <div class="img">
+    <img src="<%=listing.image.url%>" class="card-img" alt="some image">
+  </div>
+  <p>owned by <%=listing.owner.username%></p>
+  <h5>₹<%=listing.price.toLocaleString("en-IN")%>/night ,<%=listing.location%> ,<%=listing.country%></h5>
+  <p><%=listing.description%></p>
+
+    <form method="get" action="/listings/<%=listing._id%>/edit">
+      <button class="btn btn-info">Edit Listing</button>
+    </form>
+    <br>
+  <form  method="post" action="/listings/<%=listing._id%>?_method=DELETE">
+    <button class="btn btn-danger">Delete listing</button>
+  </form>
+ 
+<hr>
+<%if(CurrUser){%>
+
+  <h3>Leave a review</h3>
+  <form  method="post" action="/listings/<%=listing._id%>/review" >
+    <div>
+      <label for="range" class="form-label"></label>
+      <input type="range" 
+      min="0"
+      max="5"
+      class="form-control"
+       id="validationCustom01" 
+       placeholder=""
+       name="rating"
+      >
+    </div>
+    <div>
+      <label for="validationCustom02" class="form-label">comment:</label>
+     <textarea name="comment" class="form-control" id="validationCustom02" cols="30" rows="5" placeholder="Enter comment here"
+     required></textarea>
+     <br>
+    </div>
+      <button class="btn btn-info">Add review</button>
+  </form>
+  <%}%>
+  <hr>
+<div class="row">
+  <%for(let review of listing.reviews){%>
+    <div class="card col-lg-2 col-md-2 col-sm-1 review_card" style="width:50rem;">
+      <div class="card-body">
+        <h3 class="card-text">
+          <%=review.author.username%>
+        </h3> 
+        <p class="card-text">
+          <%=review.comment%>
+        </p>
+        <p><%=review.rating%> star</p>
+       
+      </div>
+      <form method="post" action="/listings/<%=listing._id%>/review/<%=review._id%>?_method=delete">
+        <button class="btn btn-danger" type="submit">Delete</button>
+       </form>
+    </div>
+   
+ <% }%>
+</div>
+</body>

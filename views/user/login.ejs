@@ -1,0 +1,26 @@
+<% layout("/layout/boilerplate")%>
+<body>
+  <%=successMsg%>
+  <%=errorMsg%>
+  <h3>Login</h3>
+  <form  method="post" action="/login"  >
+    <div>
+      <label for="validationCustom01" class="form-label">username:</label>
+      <input type="text" 
+      class="form-control"
+       id="validationCustom01" 
+       placeholder="Enter the username"
+       name="username"
+        required>
+    </div>
+    <div>
+      <label for="validationCustom05" class="form-label">password:</label>
+      <input type="password" placeholder="Enter the password" name="password" class="form-control" required>
+    </div>
+    <br>
+    <div>
+      <button class="btn btn-info">login</button>
+    </div>
+  </form>
+  <br><br><br><br><br><br><br><br>
+</body>

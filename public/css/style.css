@@ -1,0 +1,85 @@
+.navbar{
+  height:6rem !important;
+  background-color: rgb(198, 238, 138); 
+  color:#0A0A0A;
+}
+.fa-compass{
+  color:#fe424d !important;
+ 
+}
+
+/* footer styling */
+.f-info{
+  height:100px !important;
+  background-color: rgb(179, 178, 178) !important;
+  padding:auto !important;
+  display:flexbox;
+  flex-wrap: wrap;
+  margin:bottom 0px !important;
+  text-align: center;
+}
+.footer{
+  position:absolute;
+  margin-bottom:0;
+  width:100%;
+  text-align:center;
+}
+
+.f-social-links{
+  margin: left 40px;
+}
+
+/* cards */
+.listing_card{
+  border:none !important;
+ padding-bottom:2rem !important;
+
+}
+/* //review card */
+.review_card{
+  border:1px solid black !important;
+  padding-bottom:2rem !important;
+  margin-left:10px;
+  margin-bottom:2rem;
+  border-radius:5px !important;
+}
+
+.card-img-top{
+  
+  border-radius:1rem !important;
+  width:100% !important;
+  height:20rem !important;
+  object-fit: cover !important;
+  
+}
+.card-text p{
+  font-weight: 400 !important;
+}
+.card-body{
+  padding:0 !important;
+}
+.listing-link{
+  text-decoration: none !important;
+}
+/* card-effect */
+.card-img-overplay{
+  opacity:0;
+}
+.card-img-overplay:hover{
+  opacity:0.2;
+  background-color: white;
+}
+
+.card-img{
+  border-radius:1rem !important;
+  width:50% !important;
+  height:30rem !important;
+  object-fit: cover !important;
+} 
+
+.navbar-nav-right
+{
+  position:absolute;
+  right:10px;
+}
+
